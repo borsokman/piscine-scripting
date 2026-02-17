@@ -5,4 +5,4 @@ MY_NUM=100
 MY_PI=3.142
 MY_ARR="one, two, three, four, five"
 
-echo -e "$MY_MESSAGE\n$MY_NUM\n$MY_PI\n$MY_ARR"
+printf "%s\n%s\n%s\n%s\n%s" "$MY_MESSAGE" "$MY_NUM" "$MY_PI" "$MY_ARR"
