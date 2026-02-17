@@ -1,3 +1,3 @@
 #!/bin/bash
 
-find . -type f | wc -l | xargs
+find . -type f -o -type d | wc -l | xargs
