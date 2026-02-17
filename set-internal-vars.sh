@@ -4,5 +4,10 @@ MY_MESSAGE="Hello World"
 MY_NUM=100
 MY_PI=3.142
 MY_ARR=(one two three four five)
+ARR_STRING=$(printf "%s, " "${MY_ARR[@]}")
+ARR_STRING=${ARR_STRING%, }
 
-printf "%s\n%s\n%s\n%s\n" "$MY_MESSAGE" "$MY_NUM" "$MY_PI" "$(printf "%s, " "${MY_ARR[@]}" | sed 's/, $//')"
+printf "%s\n" "$MY_MESSAGE"
+printf "%s\n" "$MY_NUM"
+printf "%s\n" "$MY_PI"
+printf "%s\n" "$ARR_STRING"
