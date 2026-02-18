@@ -1,3 +1,5 @@
 #!/bin/bash
 
-TZ=utc ls -l --time-style='+%F %R' | sed 1d | awk '{print $1, $6, $7, $8}'
+truncate -s 1000 file1.txt
+chmod 600 file1.txt
+touch -amt 2201010000 file1.txt
