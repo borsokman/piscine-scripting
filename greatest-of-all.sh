@@ -8,11 +8,10 @@ read -p "Enter a number: " n
 
 if ! [[ $n =~ ^[0-9]+$ ]]; then
 echo "ERROR: Invalid input only positive numerical characters are allowed"
-continue
-
+exit 1
 elif [[ $n -gt 10000 ]]; then
 echo "ERROR: The number entered is too large"
-continue
+exit 1
 fi
 numbers+=("$n")
 ((count++))
