@@ -10,6 +10,6 @@ elif [[ $2 == 0 ]]; then
     echo "Error: division by zero is not allowed"
     exit 1
 else
-    division=$(BC_LINE_LENGTH=0 bc <<< "$1 / $2")
-    echo $division
+    result=$(echo "$1 / $2" | bc)
+    echo $result
 fi
