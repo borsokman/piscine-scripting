@@ -11,5 +11,5 @@ elif [[ $2 == 0 ]]; then
     exit 0
 else
     result=$(echo "$1 / $2" | bc)
-	echo $result
+	echo "$result"
 fi
