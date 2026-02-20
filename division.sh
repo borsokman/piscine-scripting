@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ $# != 2 ]]; then
+if [[ $# -ne 2 ]]; then
     echo "Error: two numbers must be provided"
     exit 1
 elif ! [[ $1 =~ ^[0-9]+$ ]] || ! [[ $2 =~ ^[0-9]+$ ]]; then
