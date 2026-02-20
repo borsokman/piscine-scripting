@@ -1,13 +1,13 @@
 #!/bin/bash
 
 if [[ $# -ne 1 ]]; then
-echo "The number of arguments provided is not exactly one."
+echo "Error"
 exit 0
 elif ! [[ $1 =~ ^[0-9]+$ ]]; then
-echo "The argument provided is not a number."
+echo "Error"
 exit 0
-elif [[ $1 > 5 ]]; then
-echo "The number provided is outside the valid range of array indices."
+elif [[ $1 < 1 ]] || [[ $1 > 5 ]]; then
+echo "Error"
 exit 0
 fi
 
