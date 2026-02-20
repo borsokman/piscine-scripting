@@ -13,4 +13,4 @@ fi
 
 array=("red" "blue" "green" "white" "black")
 
-echo ${array[$1-1]}
+echo "${array[$1-1]}"
