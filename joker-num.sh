@@ -19,11 +19,9 @@ tries=$((5 - count))
 read -p "Enter your guess ($tries tries left): " guess
 
 if ! [[ $guess =~ ^[0-9]+$ ]]; then
-    echo "Only numbers"
-    exit 1
+    continue
 elif [[ $guess -gt 100 ]] || [[ $guess -lt 1 ]]; then
-    echo "Error: wrong argument"
-    exit 1  
+    continue 
 fi
 
 ((count++))
