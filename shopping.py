@@ -1,6 +1,6 @@
 def remember_the_apple(shopping_list):
     if shopping_list == 0:
-        return 
+        return shopping_list
     if "apple" in shopping_list:
         return shopping_list 
     if "apple" not in shopping_list:
