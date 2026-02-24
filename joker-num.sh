@@ -15,7 +15,12 @@ sn=$1
 
 for ((count=0; count<5;)); do
 tries=$((5 - count))
-read -p "Enter your guess ($tries tries left): " guess
+echo "Enter your guess ($tries tries left):"
+read guess
+
+if [[ $? < 0 ]]; then
+		exit 1
+fi
 
 if ! [[ $guess =~ ^[0-9]+$ ]]; then
     continue
