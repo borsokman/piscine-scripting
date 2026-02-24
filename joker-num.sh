@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [[ $# -ne 1 ]] || [[ -z "$1" ]]; then
-    echo "Only one argument"
+    echo "Error: wrong argument"
     exit 1
 elif ! [[ $1 =~ ^[0-9]+$ ]]; then
-    echo "Only numbers"
+    echo "Error: wrong argument"
     exit 1
 elif [[ $1 -gt 100 ]] || [[ $1 -lt 1 ]]; then
     echo "Error: wrong argument"
@@ -35,4 +35,4 @@ else
 fi
 done
 
-echo "You lost, the number was $sn" 
+echo "You lost, the number was $sn"
