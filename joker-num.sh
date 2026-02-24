@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $# -ne 1 ]]; then
+if [[ $# -ne 1 ]] || [[ -z "$1" ]]; then
     echo "Only one argument"
     exit 1
 elif ! [[ $1 =~ ^[0-9]+$ ]]; then
@@ -28,7 +28,7 @@ fi
 
 if [[ $guess -eq $sn ]]; then
     echo "Congratulations, you found the number in $count moves!"
-    exit 0
+    exit
 elif [[ $guess -gt $sn ]]; then
     echo "Go down"
 else
