@@ -12,7 +12,8 @@ elif [[ $1 -gt 100 ]] || [[ $1 -lt 1 ]]; then
 fi
 
 sn=$1
-for ((count=0; count<5)); do
+
+for ((count=0; count<5;)); do
 tries=$((5 - count))
 read -p "Enter your guess ($tries tries left): " guess
 
