@@ -1,9 +1,10 @@
 import json
 
 class User:
-    username = 'user'
-    email = 'something@mail.com'
-    is_valid = False
+    def __init__(self):
+        self.username = 'user'
+        self.email = 'something@mail.com'
+        self.is_valid = False
 
 def create_new_user(data):
     user = User()
@@ -22,7 +23,7 @@ def create_new_user(data):
     return user
 
 def user_to_json(user):
-    if user.is_valid:
+    if hasattr(user, 'is_valid') and user.is_valid:
         return json.dumps({
             "username": user.username,
             "email": user.email
